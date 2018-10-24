@@ -1,0 +1,26 @@
+{
+  "name": "@project-scope/art-kit",
+  "version": "0.0.1",
+  "description": "Style Library",
+  "scripts": {
+    "compile": "npm run compile:css && npm run compile:css-min",
+    "compile:css": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/style.scss css/style.css",
+    "compile:css-min": "node-sass --output-style compressed --source-map true --source-map-contents true --precision 6 scss/style.scss css/style.min.css",
+    "lint": "stylelint scss/**/*.css",
+    "postinstall": "npm run compile",
+    "preversion": "npm run compile"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "private": true,
+  "devDependencies": {
+    "husky": "^1.0.0-rc.13",
+    "stylelint": "^9.4.0"
+  },
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}

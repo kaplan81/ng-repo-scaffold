@@ -1,0 +1,22 @@
+{
+  "app": {
+    "base": "http://first-app.domain.com:7070"
+  },
+  "api": {
+    "base": "https://dev.domain.com",
+    "paths": {
+      "features": {
+        "feature1": "feature1"
+      },
+      "segments": {
+        "api": "api",
+        "version": "v1",
+        "formatted": "formatted",
+        "entityPattern": "entityPattern"
+      },
+      "endpoints": {
+        "items": "items"
+      }
+    }
+  }
+}

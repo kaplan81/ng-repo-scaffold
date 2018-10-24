@@ -1,0 +1,25 @@
+{
+  "npmScope": "project-scope",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*",
+    "build.js": "*"
+  },
+  "projects": {
+    "first-app": {
+      "tags": []
+    },
+    "ng-kit": {
+      "tags": []
+    },
+    "test-kit": {
+      "tags": []
+    },
+    "art-kit": {
+      "tags": []
+    }
+  }
+}

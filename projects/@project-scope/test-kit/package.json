@@ -1,0 +1,11 @@
+{
+  "name": "@project-scope/test-kit",
+  "version": "0.0.1",
+  "description": "Angular testing classes",
+  "private": true,
+  "peerDependencies": {
+    "@types/jest": "^23.3.1",
+    "jest": "^23.4.2",
+    "jest-preset-angular": "^6.0.0"
+  }
+}

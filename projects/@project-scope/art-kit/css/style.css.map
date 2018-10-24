@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../scss/style.scss",
+		"../scss/mixins.scss",
+		"../scss/mixins/full.scss"
+	],
+	"sourcesContent": [
+		"@import 'mixins';\n",
+		"@import 'mixins/full';\n",
+		"@mixin fullSpace {\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n}\n\n@mixin fullFixed {\n  position: fixed;\n  @include fullSpace();\n}\n\n@mixin fullAbsolute {\n  position: absolute;\n  @include fullSpace();\n}\n\n@mixin fullRelative {\n  position: relative;\n  @include fullSpace();\n}\n\n@mixin fullStatic {\n  position: static;\n  @include fullSpace();\n}\n\n.full {\n  @include fullSpace();\n}\n"
+	],
+	"names": [],
+	"mappings": "AE2BA,AAAA,KAAK,CAAC;EA1BJ,GAAG,EAAE,CAAC;EACN,IAAI,EAAE,CAAC;EACP,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CAyBb"
+}

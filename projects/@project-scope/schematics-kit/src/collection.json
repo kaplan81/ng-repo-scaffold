@@ -1,0 +1,24 @@
+{
+  "$schema": "../../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "extends": ["@schematics/angular", "@ngrx/schematics"],
+  "schematics": {
+    "action": {
+      "aliases": ["a"],
+      "description": "Add action to a concrete project and feature.",
+      "factory": "./action",
+      "schema": "./action/schema.json"
+    },
+    "effect": {
+      "aliases": ["ef"],
+      "description": "Add side effect class to a concrete project and feature.",
+      "factory": "./effect",
+      "schema": "./effect/schema.json"
+    },
+    "reducer": {
+      "aliases": ["r"],
+      "description": "Add state reducer to a concrete project and feature.",
+      "factory": "./reducer",
+      "schema": "./reducer/schema.json"
+    }
+  }
+}

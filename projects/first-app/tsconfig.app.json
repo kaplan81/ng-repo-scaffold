@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "../../out-tsc/app",
+    "paths": {
+      "@first-app-core/*": ["./src/app/_core/*"],
+      "@first-app-shared/*": ["./src/app/_shared/*"],
+      "@first-app/*": ["./src/app/app/*"],
+      "@first-app-feature1/*": ["./src/app/feature1/*"],
+      "@first-app-environments/*": ["./src/environments/*"],
+      "@project-scope/ng-kit": ["../../dist/@project-scope/ng-kit"],
+      "@project-scope/test-kit": ["../../dist/@project-scope/test-kit"]
+    }
+  },
+  "angularCompilerOptions": {
+    "preserveWhitespaces": "off"
+  },
+  "exclude": ["**/*.spec.ts"]
+}

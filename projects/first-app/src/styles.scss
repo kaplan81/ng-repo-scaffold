@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'reset';
+@import 'variables';
+
+html, body {
+  font-family: Verdana, Arial, sans-serif;
+  color: $primary;
+}
+
+h1 {
+  font-size: $h1;
+}
+h2, h3 {
+  font-size: $h2;
+}
+h4 {
+  font-size: $h4;
+}
+
+#pref-main {
+  kit-tabs {
+    height: 100%;
+    // .kit-tabs__content {
+    //   // background-color: pink;
+    // }
+  }
+}
+

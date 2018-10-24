@@ -1,0 +1,14 @@
+{
+  "name": "@project-scope/schematics-kit",
+  "version": "0.0.0",
+  "description": "A schematics",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "keywords": [
+    "schematics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "schematics": "./src/collection.json"
+}

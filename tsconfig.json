@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2015",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "paths": {
+      "@first-app-core/*": ["./projects/first-app/src/app/_core/*"],
+      "@first-app-shared/*": ["./projects/first-app/src/app/_shared/*"],
+      "@first-app/*": ["./projects/first-app/src/app/app/*"],
+      "@first-app-feature1/*": ["./projects/first-app/src/app/feature1/*"],
+      "@first-app-environments/*": ["./projects/first-app/src/environments/*"],
+      "@project-scope/ng-kit": ["dist/@project-scope/ng-kit"],
+      "@project-scope/test-kit": ["dist/@project-scope/test-kit"]
+    }
+  }
+}

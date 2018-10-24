@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "title": "Extended NgRx Effect Options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The name of the effect.",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "project": {
+      "description": "The name of the project to set the effect.",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      }
+    },
+    "projectFeature": {
+      "description": "The name of the feature within the project.",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 2
+      }
+    },
+    "spec": {
+      "type": "boolean",
+      "description": "Specifies if a spec file is generated.",
+      "default": false
+    },
+    "flat": {
+      "type": "boolean",
+      "default": true,
+      "description": "Flag to indicate if a dir is created."
+    }
+  },
+  "required": []
+}

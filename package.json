@@ -1,0 +1,108 @@
+{
+  "name": "first-app",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "npm run serve-first-app:mo",
+    "postinstall": "npm run build-test-kit && npm run build-ng-kit:nv && npm run build-schematics-kit && npm run link-schematics-kit",
+    "affected:dep-graph": "npx nx affected:dep-graph --base=master",
+    "build": "node build.js",
+    "build-first-app": "npm run test-first-app & ng build first-app --prod",
+    "build-first-app:nv": "ng build first-app --prod",
+    "build-ng-kit": "npm run test-ng-kit & ng build ng-kit --prod",
+    "build-ng-kit:nv": "ng build ng-kit --prod",
+    "build-schematics-kit": "npm run build --prefix projects/@project-scope/schematics-kit",
+    "build-test-kit": "ng build test-kit --prod",
+    "kit-in-ng-kit:m": "ng generate module --project ng-kit --spec false",
+    "kit-in-ng-kit:md": "ng generate module --project ng-kit --spec false -d",
+    "git-branch-name": "git rev-parse --abbrev-ref HEAD",
+    "git-push:nv": "git push --no-verify",
+    "link-schematics-kit": "npm link ./projects/@project-scope/schematics-kit && npm link @project-scope/schematics-kit",
+    "lint": "ng lint",
+    "serve-first-app:mo": "ng serve first-app --host first-app.domain.com --port 7070 --aot -o",
+    "serve-first-app:m": "ng serve first-app --host first-app.domain.com --port 7070 --aot",
+    "serve-first-app:d": "npm run build-first-app && lite-server --baseDir dist/first-app",
+    "test": "jest",
+    "test:c": "jest --coverage",
+    "test:ci": "jest --runInBand --coverage",
+    "test-first-app": "jest projects/first-app/src/app/**",
+    "test-ng-kit": "jest projects/@project-scope/ng-kit/src/**"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint",
+      "pre-push": "npm test"
+    }
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.spec.json"
+      },
+      "__TRANSFORM_HTML__": true
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/jest.config.ts",
+    "testURL": "http://localhost/",
+    "moduleNameMapper": {
+      "@first-app-core/(.*)": "<rootDir>/projects/first-app/src/app/_core/$1",
+      "@first-app-shared/(.*)": "<rootDir>/projects/first-app/src/app/_shared/$1",
+      "@first-app/(.*)": "<rootDir>/projects/first-app/src/app/app/$1",
+      "@first-app-feature1/(.*)": "<rootDir>/projects/first-app/src/app/feature1/$1",
+      "@first-app-environments/(.*)": "<rootDir>/projects/first-app/src/environments/$1",
+      "^@project-scope/ng-kit$": "<rootDir>/dist/@project-scope/ng-kit",
+      "^@project-scope/test-kit$": "<rootDir>/dist/@project-scope/test-kit"
+    },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/projects/@project-scope/ng-kit/package.json",
+      "<rootDir>/projects/@project-scope/test-kit/package.json"
+    ]
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^7.0.0",
+    "@angular/cdk": "^6.4.7",
+    "@angular/common": "^7.0.0",
+    "@angular/compiler": "^7.0.0",
+    "@angular/core": "^7.0.0",
+    "@angular/forms": "^7.0.0",
+    "@angular/http": "^7.0.0",
+    "@angular/platform-browser": "^7.0.0",
+    "@angular/platform-browser-dynamic": "^7.0.0",
+    "@angular/router": "^7.0.0",
+    "@ngrx/effects": "^6.1.0",
+    "@ngrx/entity": "^6.1.0",
+    "@ngrx/router-store": "^6.1.0",
+    "@ngrx/store": "^6.1.0",
+    "@ngrx/store-devtools": "^6.1.0",
+    "core-js": "^2.5.4",
+    "rxjs": "^6.3.3",
+    "zone.js": "~0.8.26"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.7.0",
+    "@angular-devkit/build-ng-packagr": "~0.7.0",
+    "@angular-devkit/schematics-cli": "^0.9.0-rc.1",
+    "@angular/cli": "~7.0.1",
+    "@angular/compiler-cli": "^7.0.0",
+    "@angular/language-service": "^7.0.0",
+    "@ngrx/schematics": "^6.1.0",
+    "@nrwl/schematics": "^6.3.0",
+    "@types/jest": "^23.3.1",
+    "@types/node": "~8.9.4",
+    "codelyzer": "~4.2.1",
+    "husky": "^1.0.0-rc.13",
+    "jest": "^23.4.2",
+    "jest-marbles": "^2.0.0",
+    "jest-preset-angular": "^6.0.0",
+    "lite-server": "^2.4.0",
+    "ng-packagr": "^3.0.0",
+    "ngrx-store-freeze": "^0.2.4",
+    "prettier": "^1.14.0",
+    "pretty-quick": "^1.6.0",
+    "ts-node": "~5.0.1",
+    "tslib": "^1.9.0",
+    "tslint": "~5.9.1",
+    "typescript": "^3.1.3"
+  }
+}

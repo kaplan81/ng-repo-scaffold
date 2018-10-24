@@ -1,0 +1,8 @@
+{
+  "app": {
+    "base": "http://localhost:4200"
+  },
+  "api": {
+    "base": "https://dev.domain.com"
+  }
+}
