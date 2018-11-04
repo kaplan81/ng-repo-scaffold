@@ -3,7 +3,7 @@ import * as fromRootModels from '@first-app/models';
 import * as fromRootServices from '@first-app/services';
 
 @Component({
-  selector: 'fstroot',
+  selector: 'fst-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

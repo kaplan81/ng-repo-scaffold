@@ -11,7 +11,7 @@ import { RouterStateSerializer, StoreRouterConnectingModule } from '@ngrx/router
 import { StoreModule } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
 
-@Component({ selector: 'fstfirst-nav', template: '' })
+@Component({ selector: 'fst-first-nav', template: '' })
 class FirstNavStubComponent {}
 
 describe('RouterStateService', () => {

@@ -1,4 +1,13 @@
-import { AfterContentInit, ChangeDetectionStrategy, Component, ContentChildren, EventEmitter, Output, QueryList, ViewEncapsulation } from '@angular/core';
+import {
+  AfterContentInit,
+  ChangeDetectionStrategy,
+  Component,
+  ContentChildren,
+  EventEmitter,
+  Output,
+  QueryList,
+  ViewEncapsulation
+} from '@angular/core';
 import { KitTabComponent } from './tab/tab.component';
 
 @Component({
