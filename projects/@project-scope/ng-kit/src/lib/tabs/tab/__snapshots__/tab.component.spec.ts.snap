@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KitTabComponent should match snapshot 1`] = `
+<kit-tab
+  _isActive="false"
+  contentPortal={[Function TemplatePortal]}
+  label=""
+  plainContent={[Function TemplateRef_]}
+  templateContent="undefined"
+  viewContainerRef={[Function ViewContainerRef_]}
+>
+  
+</kit-tab>
+`;

@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should create 1`] = `
+<fst-root
+  links={[Function Array]}
+  navService={[Function NavService]}
+>
+  <div
+    id="fstlayout"
+  >
+    <div
+      id="fstheader"
+    >
+      <nav
+        id="fstnav"
+      >
+        
+        <h2
+          ng-reflect-router-link="/,feature1"
+          tabindex="0"
+        >
+          feature1
+        </h2>
+      </nav>
+    </div>
+    <div
+      id="fstpage"
+    >
+      <div
+        id="fstcontainer"
+      >
+        <div
+          id="fstsidebar"
+        >
+          <div
+            class="widget"
+          >
+            <div
+              class="widget__heading"
+            >
+              <h3>
+                Filters
+              </h3>
+            </div>
+            <div
+              class="widget__tags"
+            >
+              <h4>
+                Tags
+              </h4>
+              <ul
+                style="margin-top: 20px;"
+              >
+                <li>
+                  Tag 1
+                </li>
+                <li>
+                  Tag 2
+                </li>
+                <li>
+                  Tag 3
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          id="fstmain"
+        >
+          <router-outlet />
+        </div>
+      </div>
+    </div>
+  </div>
+</fst-root>
+`;

@@ -1,12 +1,20 @@
 /* tslint:disable:no-unused-variable */
-import { DebugElement } from '@angular/core';
+import { Component, DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from '@first-app/containers/app/app.component';
 import * as fromRootModels from '@first-app/models';
 import * as fromRootServices from '@first-app/services';
-import { click, ComponentSuite, ComponentSuiteElements, RouterLinkStubDirective } from '@project-scope/test-kit';
+import {
+  click,
+  ComponentSuite,
+  ComponentSuiteElements,
+  RouterLinkStubDirective
+} from '@project-scope/test-kit';
+
+@Component({ selector: 'fst-first-nav', template: '' })
+class FirstNavStubComponent {}
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -16,8 +24,10 @@ describe('AppComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent, RouterLinkStubDirective],
-      imports: [RouterTestingModule],
+      declarations: [AppComponent, FirstNavStubComponent, RouterLinkStubDirective],
+      imports: [
+        RouterTestingModule.withRoutes([{ path: 'feature1', component: FirstNavStubComponent }])
+      ],
       providers: [fromRootServices.NavService]
     })
       .compileComponents()
@@ -25,7 +35,7 @@ describe('AppComponent', () => {
         fixture = TestBed.createComponent(AppComponent);
         els = new ComponentSuite<AppComponent>(fixture).elements;
         navService = els.host.debugEl.injector.get(fromRootServices.NavService);
-        navLinks = [navService.feature1.link;
+        navLinks = [navService.feature1.link];
       });
   }));
 

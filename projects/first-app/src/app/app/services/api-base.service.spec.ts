@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-variable */
 import { TestBed } from '@angular/core/testing';
 import { ConfigService } from '@first-app-core/config.service';
-import { ApiService } from '@first-app/services/api.service';
+import { ApiBaseService } from '@first-app/services/api-base.service';
 
 const configServiceMock = jest.fn<ConfigService>(() => ({
   apiBase: 'http://first-app.domain.com:7070',
@@ -19,20 +19,20 @@ const configServiceMock = jest.fn<ConfigService>(() => ({
   }
 }));
 
-describe('ApiService', () => {
-  let apiService: ApiService;
+describe('ApiBaseService', () => {
+  let apiBaseService: ApiBaseService;
   let configService: ConfigService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [{ provide: ConfigService, useClass: configServiceMock }]
     });
-    apiService = TestBed.get(ApiService);
+    apiBaseService = TestBed.get(ApiBaseService);
     configService = TestBed.get(ConfigService);
   });
 
   it('can be instantiated via DI', () => {
-    expect(apiService instanceof ApiService).toBe(true);
+    expect(apiBaseService instanceof ApiBaseService).toBe(true);
   });
 
   it('gets its properties from ConfigService', () => {
@@ -43,7 +43,7 @@ describe('ApiService', () => {
       configService.apiPathSegments.entityPattern
     }`;
 
-    expect(apiService.feature1Base).toEqual(feature1Base);
-    expect(apiService.entityFormatPath).toEqual(entityFormatPath);
+    expect(apiBaseService.feature1Base).toEqual(feature1Base);
+    expect(apiBaseService.entityFormatPath).toEqual(entityFormatPath);
   });
 });

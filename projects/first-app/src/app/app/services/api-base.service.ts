@@ -4,7 +4,7 @@ import { ConfigService } from '@first-app-core/config.service';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class ApiBaseService {
   constructor(private configService: ConfigService) {}
 
   get feature1Base(): string {

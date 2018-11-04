@@ -1,0 +1,273 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KitTabsComponent basic case should match snapshot 1`] = `
+<ng-component>
+  <kit-tabs>
+    <div
+      class="kit-tabs__header"
+      role="tablist"
+    >
+      
+      <div
+        class="kit-tabs__label kit-active"
+        role="tab"
+      >
+         Label 1 
+      </div>
+      <div
+        class="kit-tabs__label"
+        role="tab"
+      >
+         Label 2 
+      </div>
+      <div
+        class="kit-tabs__label"
+        role="tab"
+      >
+         Label 3 
+      </div>
+    </div>
+    <div
+      class="kit-tabs__content"
+      role="tabpanel"
+    >
+      
+      
+      
+      <kit-tab-content
+        ng-reflect-content="[object Object]"
+      >
+        
+        Content 1
+        
+      </kit-tab-content>
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </kit-tabs>
+</ng-component>
+`;
+
+exports[`KitTabsComponent dynamic case should match snapshot 1`] = `
+<ng-component
+  tabs={[Function Array]}
+>
+  <kit-tabs>
+    <div
+      class="kit-tabs__header"
+      role="tablist"
+    >
+      
+      <div
+        class="kit-tabs__label kit-active"
+        role="tab"
+      >
+         tab.label 
+      </div>
+      <div
+        class="kit-tabs__label"
+        role="tab"
+      >
+         tab.label 
+      </div>
+      <div
+        class="kit-tabs__label"
+        role="tab"
+      >
+         tab.label 
+      </div>
+    </div>
+    <div
+      class="kit-tabs__content"
+      role="tabpanel"
+    >
+      
+      
+      
+      <kit-tab-content
+        ng-reflect-content="[object Object]"
+      >
+        
+        tab.content
+        
+      </kit-tab-content>
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </kit-tabs>
+</ng-component>
+`;
+
+exports[`KitTabsComponent with active tab should match snapshot 1`] = `
+<ng-component>
+  <kit-tabs>
+    <div
+      class="kit-tabs__header"
+      role="tablist"
+    >
+      
+      <div
+        class="kit-tabs__label"
+        role="tab"
+      >
+         Label 1 
+      </div>
+      <div
+        class="kit-tabs__label kit-active"
+        role="tab"
+      >
+         Label 2 
+      </div>
+      <div
+        class="kit-tabs__label"
+        role="tab"
+      >
+         Label 3 
+      </div>
+    </div>
+    <div
+      class="kit-tabs__content"
+      role="tabpanel"
+    >
+      
+      
+      
+      
+      
+      
+      <kit-tab-content
+        ng-reflect-content="[object Object]"
+      >
+        
+        Content 2
+        
+      </kit-tab-content>
+      
+      
+      
+      
+    </div>
+  </kit-tabs>
+</ng-component>
+`;
+
+exports[`KitTabsComponent with kitTabContent directive should match snapshot 1`] = `
+<ng-component
+  plainContent={[Function String]}
+  templateContent={[Function String]}
+>
+  <kit-tabs>
+    <div
+      class="kit-tabs__header"
+      role="tablist"
+    >
+      
+      <div
+        class="kit-tabs__label kit-active"
+        role="tab"
+      >
+         Label 1 
+      </div>
+      <div
+        class="kit-tabs__label"
+        role="tab"
+      >
+         Label 2 
+      </div>
+      <div
+        class="kit-tabs__label"
+        role="tab"
+      >
+         Label 3 
+      </div>
+    </div>
+    <div
+      class="kit-tabs__content"
+      role="tabpanel"
+    >
+      
+      
+      
+      <kit-tab-content
+        ng-reflect-content="[object Object]"
+      >
+        
+        plain transcluded content!
+        
+      </kit-tab-content>
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </kit-tabs>
+</ng-component>
+`;
+
+exports[`KitTabsComponent with selectedIndexChange event binding should match snapshot 1`] = `
+<ng-component
+  index="null"
+>
+  <kit-tabs>
+    <div
+      class="kit-tabs__header"
+      role="tablist"
+    >
+      
+      <div
+        class="kit-tabs__label kit-active"
+        role="tab"
+      >
+         Label 1 
+      </div>
+      <div
+        class="kit-tabs__label"
+        role="tab"
+      >
+         Label 2 
+      </div>
+      <div
+        class="kit-tabs__label"
+        role="tab"
+      >
+         Label 3 
+      </div>
+    </div>
+    <div
+      class="kit-tabs__content"
+      role="tabpanel"
+    >
+      
+      
+      
+      <kit-tab-content
+        ng-reflect-content="[object Object]"
+      >
+        
+        Content 1
+        
+      </kit-tab-content>
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </kit-tabs>
+</ng-component>
+`;

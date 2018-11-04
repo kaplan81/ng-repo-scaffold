@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KitTabContentComponent basic case should match snapshot 1`] = `
+<ng-component
+  content={[Function TemplatePortal]}
+  templateRef={[Function TemplateRef_]}
+  viewContainerRef={[Function ViewContainerRef_]}
+>
+  <kit-tab-content
+    ng-reflect-content="[object Object]"
+  >
+    
+    Tab Content
+  </kit-tab-content>
+</ng-component>
+`;

@@ -2,7 +2,8 @@
 import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { ApiService } from '@first-app-feature1/services/feature1.service';
+import { ApiService } from '@first-app-feature1/services/api.service';
+import * as fromRootServices from '@first-app/services';
 import { ErrorService } from '@project-scope/ng-kit';
 import { map } from 'rxjs/operators';
 
@@ -10,30 +11,33 @@ interface Data {
   name: string;
 }
 
-const apiServiceMock = jest.fn<ApiService>(() => ({
+const apiBaseServiceMock = jest.fn<fromRootServices.ApiBaseService>(() => ({
   feature1Base: 'https://dev.domain.com/feature1/api/v-test/items',
   entityFormatPath: 'formatted/entityPattern'
 }));
 
-const baseUrl = `${apiServiceMock().feature1Base}/${apiServiceMock().entityFormatPath}`;
+const baseUrl = `${apiBaseServiceMock().feature1Base}/${apiBaseServiceMock().entityFormatPath}`;
 
 describe('ApiService', () => {
   let apiService: ApiService;
   let httpClient: HttpClient;
   let httpTestingController: HttpTestingController;
-  // let apiService: ApiService;
+  let apiBaseService: fromRootServices.ApiBaseService;
   let entitiesCount: number;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      // We need to include ApiService itself since it is not providedIn 'root'.
-      providers: [ApiService, ErrorService, { provide: ApiService, useClass: apiServiceMock }]
+      providers: [
+        ApiService,
+        ErrorService,
+        { provide: fromRootServices.ApiBaseService, useClass: apiBaseServiceMock }
+      ]
     });
     apiService = TestBed.get(ApiService);
     httpClient = TestBed.get(HttpClient);
     httpTestingController = TestBed.get(HttpTestingController);
-    // apiService = TestBed.get(ApiService);
+    apiBaseService = TestBed.get(fromRootServices.ApiBaseService);
     entitiesCount = 5;
   });
 
@@ -98,5 +102,4 @@ describe('ApiService', () => {
 
     req.flush(testData);
   });
-
 });

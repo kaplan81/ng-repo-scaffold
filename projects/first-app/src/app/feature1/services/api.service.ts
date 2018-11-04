@@ -17,7 +17,7 @@ export class ApiService {
   private readonly entity3Type: string;
 
   constructor(
-    private apiService: fromRootServices.ApiService,
+    private apiService: fromRootServices.ApiBaseService,
     private errorService: ErrorService,
     private http: HttpClient
   ) {
@@ -40,10 +40,7 @@ export class ApiService {
     return this.getFeature1Entities(url, 'getEntity3Entities');
   }
 
-  private getFeature1Entities(
-    url: string,
-    errorMsg: string
-  ): Observable<any> {
+  private getFeature1Entities(url: string, errorMsg: string): Observable<any> {
     return this.http.get<{ concreteData: any }>(url).pipe(
       map((data: { concreteData: any }) => data.concreteData),
       catchError(this.errorService.handleHttpError<any>(errorMsg))
