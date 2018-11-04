@@ -7,10 +7,10 @@
       "root": "projects/first-app/",
       "sourceRoot": "projects/first-app/src",
       "projectType": "application",
-      "prefix": "pref",
+      "prefix": "fst",
       "schematics": {
         "@project-scope/schematics-kit:component": {
-          "prefix": "pref",
+          "prefix": "fst",
           "styleext": "scss",
           "flat": true
         }

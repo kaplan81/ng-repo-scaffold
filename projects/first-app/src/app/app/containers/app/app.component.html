@@ -1,12 +1,12 @@
-<div id="pref-layout">
-  <div id="pref-header">
-    <nav id="pref-nav">
+<div id="fstlayout">
+  <div id="fstheader">
+    <nav id="fstnav">
       <h2 *ngFor="let link of links" [routerLink]="link.path">{{link.text}}</h2>
     </nav>
   </div>
-  <div id="pref-page">
-    <div id="pref-container">
-      <div id="pref-sidebar">
+  <div id="fstpage">
+    <div id="fstcontainer">
+      <div id="fstsidebar">
         <!--TODO: widget component -->
         <div class="widget">
           <div class="widget__heading">
@@ -22,7 +22,7 @@
           </div>
         </div>
       </div>
-      <div id="pref-main">
+      <div id="fstmain">
         <router-outlet></router-outlet>
       </div>
     </div>

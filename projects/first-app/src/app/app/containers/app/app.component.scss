@@ -2,7 +2,7 @@
 @import 'mixins';
 
 /* Provional layout for container in page so in <router-outlet> */
-#pref-layout {
+#fstlayout {
   display: grid;
   grid-template-rows: $header-height auto;
   grid-template-areas:
@@ -10,13 +10,13 @@
     'page';
   height: 100%;
   margin: 0 $gap * 2;
-  #pref-header {
+  #fstheader {
     grid-area: header;
     display: grid;
     grid-template-columns: $sidebar-width auto;
     grid-template-areas: '. nav';
     height: $header-height;
-    #pref-nav {
+    #fstnav {
       grid-area: nav;
       display: flex;
       padding-left: $gutter;
@@ -26,17 +26,17 @@
       }
     }
   }
-  #pref-page {
+  #fstpage {
     grid-area: page;
     margin-bottom: $gap * 2;
-    #pref-container {
+    #fstcontainer {
       display: grid;
       grid-template-columns: $sidebar-width auto;
       grid-template-rows: auto;
       grid-template-areas:
       'sidebar main';
       height: 100%;
-      #pref-sidebar {
+      #fstsidebar {
         grid-area: sidebar;
         .widget {
           @include borderDiv();
@@ -55,7 +55,7 @@
           }
         }
       }
-      #pref-main {
+      #fstmain {
         grid-area: main;
       }
     }
