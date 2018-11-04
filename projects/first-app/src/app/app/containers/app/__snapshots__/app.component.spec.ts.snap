@@ -39,7 +39,7 @@ exports[`AppComponent should create 1`] = `
               class="widget__heading"
             >
               <h3>
-                Filters
+                Widget
               </h3>
             </div>
             <div
