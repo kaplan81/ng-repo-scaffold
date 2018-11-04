@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import * as fromFeature1Containers from '@first-app-feature1/containers';
 import * as fromRootEnums from '@first-app/enums';
 
-const redirectTo = `/${fromRootEnums.NavPrimaryPath.feature1}/${fromRootEnums.NavChildrenPath.entity1}`;
+const redirectTo = `/${fromRootEnums.NavPrimaryPath.feature1}/${
+  fromRootEnums.NavChildrenPath.entity1
+}`;
 
 const routes: Routes = [
   {
@@ -12,7 +14,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: fromRootEnums.NavPrimaryPath.empty,
+    path: fromRootEnums.NavChildrenPath.entity1,
     component: fromFeature1Containers.Feature1Component
   }
 ];

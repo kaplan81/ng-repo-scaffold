@@ -1,11 +1,12 @@
-import * as fromFeature1Models from '@first-app-feature1/models';
+// import * as fromFeature1Models from '@first-app-feature1/models';
 import * as fromFeature1Actions from '@first-app-feature1/store/actions';
 import { feature1Stater, initialState } from '@first-app-feature1/store/reducers/initial';
 
 export function reducer(
   state = initialState,
   action: fromFeature1Actions.EntitiesAction
-): fromFeature1Models.Feature1EntitiesState {
+  // ): fromFeature1Models.Feature1EntitiesState {
+): any {
   switch (action.type) {
     case fromFeature1Actions.EntitiesActionTypes.LoadEntities: {
       console.log('Loading entities...');
@@ -14,8 +15,7 @@ export function reducer(
     case fromFeature1Actions.EntitiesActionTypes.LoadEntitiesSuccess: {
       console.log('***Entities loaded***');
       const addIds: number[] = action.payload.typeEntities.ids;
-      const addEntities: { [id: number]: any } =
-        action.payload.typeEntities.entities;
+      const addEntities: { [id: number]: any } = action.payload.typeEntities.entities;
 
       return feature1Stater.add({ ...state, loading: false, loaded: true }, addIds, addEntities);
     }

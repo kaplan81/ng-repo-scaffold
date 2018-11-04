@@ -2,9 +2,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import * as fromRootModels from '@first-app/models';
 import * as fromRootServices from '@first-app/services';
 
-// TODO: test feature1 components.
 @Component({
-  template: 'Feature 1 components here!',
+  template: 'Feature 1 entities here!',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Feature1Component {

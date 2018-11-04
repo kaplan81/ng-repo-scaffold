@@ -13,7 +13,7 @@ import * as fromRootEnums from '@first-app/enums';
 // export type Path = [string, NavigationExtras, Outlet, ...any[]];
 export type Path = any[];
 export type NavPath = fromRootEnums.NavPrimaryPath | fromRootEnums.NavChildrenPath;
-export type PrimaryNav = Feature1 | Methods;
+export type PrimaryNav = Feature1;
 
 export interface NavRoute {
   path: Path;
