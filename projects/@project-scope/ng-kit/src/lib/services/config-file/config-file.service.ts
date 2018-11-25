@@ -2,7 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, NgModule } from '@angular/core';
 import { Observable } from 'rxjs';
 import { catchError, take, tap } from 'rxjs/operators';
-import { ErrorService } from './error.service';
+import { ErrorService } from '../error/error.service';
 
 export const configFileparams = new HttpParams()
   .set('configRequest', 'jsonFile')

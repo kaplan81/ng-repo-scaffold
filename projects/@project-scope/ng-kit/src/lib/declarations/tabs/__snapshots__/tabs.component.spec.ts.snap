@@ -12,19 +12,19 @@ exports[`KitTabsComponent basic case should match snapshot 1`] = `
         class="kit-tabs__label kit-active"
         role="tab"
       >
-         Label 1 
+        Label 1
       </div>
       <div
         class="kit-tabs__label"
         role="tab"
       >
-         Label 2 
+        Label 2
       </div>
       <div
         class="kit-tabs__label"
         role="tab"
       >
-         Label 3 
+        Label 3
       </div>
     </div>
     <div
@@ -67,19 +67,19 @@ exports[`KitTabsComponent dynamic case should match snapshot 1`] = `
         class="kit-tabs__label kit-active"
         role="tab"
       >
-         tab.label 
+        tab.label
       </div>
       <div
         class="kit-tabs__label"
         role="tab"
       >
-         tab.label 
+        tab.label
       </div>
       <div
         class="kit-tabs__label"
         role="tab"
       >
-         tab.label 
+        tab.label
       </div>
     </div>
     <div
@@ -120,19 +120,19 @@ exports[`KitTabsComponent with active tab should match snapshot 1`] = `
         class="kit-tabs__label"
         role="tab"
       >
-         Label 1 
+        Label 1
       </div>
       <div
         class="kit-tabs__label kit-active"
         role="tab"
       >
-         Label 2 
+        Label 2
       </div>
       <div
         class="kit-tabs__label"
         role="tab"
       >
-         Label 3 
+        Label 3
       </div>
     </div>
     <div
@@ -176,19 +176,19 @@ exports[`KitTabsComponent with kitTabContent directive should match snapshot 1`]
         class="kit-tabs__label kit-active"
         role="tab"
       >
-         Label 1 
+        Label 1
       </div>
       <div
         class="kit-tabs__label"
         role="tab"
       >
-         Label 2 
+        Label 2
       </div>
       <div
         class="kit-tabs__label"
         role="tab"
       >
-         Label 3 
+        Label 3
       </div>
     </div>
     <div
@@ -231,19 +231,19 @@ exports[`KitTabsComponent with selectedIndexChange event binding should match sn
         class="kit-tabs__label kit-active"
         role="tab"
       >
-         Label 1 
+        Label 1
       </div>
       <div
         class="kit-tabs__label"
         role="tab"
       >
-         Label 2 
+        Label 2
       </div>
       <div
         class="kit-tabs__label"
         role="tab"
       >
-         Label 3 
+        Label 3
       </div>
     </div>
     <div

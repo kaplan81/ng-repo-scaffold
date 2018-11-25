@@ -2,8 +2,8 @@ import { AfterViewInit, Directive, ElementRef, EventEmitter, Input, Output } fro
 import { EventManager } from '@angular/platform-browser';
 import { Observable, Subject } from 'rxjs';
 import { filter, map, pairwise, takeUntil } from 'rxjs/operators';
-import { SubcribedContainer } from '../abstracts/container.abstract';
-import { ScrollPosition } from './infinite-scroll.model';
+import { SubcribedContainer } from '../../abstracts/container.abstract';
+import { ScrollPosition } from '../../models/scroll.model';
 
 @Directive({
   selector: '[kitInfiniteScroll]'

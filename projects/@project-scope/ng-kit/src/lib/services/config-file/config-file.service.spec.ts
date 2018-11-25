@@ -2,9 +2,9 @@
 import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
+import { ErrorService } from '../error/error.service';
 import { configFileparams, ConfigFileService } from './config-file.service';
 import * as configFile from './config-file.spec.json';
-import { ErrorService } from './error.service';
 
 describe('ConfigFileService', () => {
   let httpClient: HttpClient;

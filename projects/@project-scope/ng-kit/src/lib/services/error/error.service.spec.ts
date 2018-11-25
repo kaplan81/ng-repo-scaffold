@@ -22,7 +22,7 @@ describe('ErrorService', () => {
     function catchError() {
       return errorHandler(httpError);
     }
-    // Jest calls through methods when spying.
+    // Jest calls throguth methods when spying.
     // However it does not get console executions.
     console.error(operation);
 

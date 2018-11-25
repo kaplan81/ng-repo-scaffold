@@ -1,0 +1,14 @@
+<nav class="kit-tabs__header" role="tablist">
+  <a
+    class="kit-tabs__label"
+    role="tab"
+    *ngFor="let nav of navs"
+    [routerLink]="nav.path"
+    routerLinkActive="kit-active"
+    [innerHTML]="label(nav)">
+  </a>
+</nav>
+
+<div class="kit-tabs__content">
+  <router-outlet></router-outlet>
+</div>

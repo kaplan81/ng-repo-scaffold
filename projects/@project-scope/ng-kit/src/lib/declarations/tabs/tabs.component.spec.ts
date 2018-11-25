@@ -1,11 +1,14 @@
 /* tslint:disable:no-unused-variable */
+import { PortalModule } from '@angular/cdk/portal';
+import { CommonModule } from '@angular/common';
 import { Component, DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { click, ComponentSuite, ComponentSuiteElements } from '@project-scope/test-kit';
+import { KitTabContentComponent } from './tab-content/tab-content.component';
+import { KitTabContentDirective } from './tab-content/tab-content.directive';
 import { KitTabComponent } from './tab/tab.component';
 import { KitTabsComponent } from './tabs.component';
-import { KitTabsModule } from './tabs.module';
 
 // bascic case
 @Component({
@@ -87,14 +90,18 @@ class ContentDirectiveTabsTestApp {
 describe('KitTabsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [KitTabsModule],
       declarations: [
+        KitTabsComponent,
+        KitTabComponent,
+        KitTabContentComponent,
+        KitTabContentDirective,
         BasicTabsTestApp,
         DynamicTabsTestApp,
         IsActiveTabsTestApp,
         SelectedEventTabsTestApp,
         ContentDirectiveTabsTestApp
-      ]
+      ],
+      imports: [CommonModule, PortalModule]
     }).compileComponents();
   }));
 

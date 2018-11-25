@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 export class ErrorModule {}
 
 /**
- * Kiteric error handlers.
+ * Generic error handlers.
  */
 @Injectable({
   providedIn: ErrorModule

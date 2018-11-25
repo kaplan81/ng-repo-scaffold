@@ -1,7 +1,6 @@
 <div class="kit-tabs__header" role="tablist">
   <div class="kit-tabs__label" role="tab" *ngFor="let tab of tabs; let i = index" [class.kit-active]="selectedIndex === i"
-    (click)="changeSelectedIndex(i)">
-    {{tab.label}}
+    (click)="changeSelectedIndex(i)" [innerHTML]="tab.label">
   </div>
 </div>
 <div class="kit-tabs__content" role="tabpanel">

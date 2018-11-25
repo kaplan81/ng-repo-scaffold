@@ -1,6 +1,12 @@
 /* tslint:disable:no-unused-variable */
 import { PortalModule, TemplatePortal } from '@angular/cdk/portal';
-import { AfterContentInit, Component, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
+import {
+  AfterContentInit,
+  Component,
+  TemplateRef,
+  ViewChild,
+  ViewContainerRef
+} from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ComponentSuite, ComponentSuiteElements } from '@project-scope/test-kit';
 import { KitTabContentComponent } from './tab-content.component';
