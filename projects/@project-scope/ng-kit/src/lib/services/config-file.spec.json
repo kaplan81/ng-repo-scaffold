@@ -1,6 +1,6 @@
 {
   "app": {
-    "base": "http://localhost:4200"
+    "base": "http://first-app.domain.com:7070"
   },
   "api": {
     "base": "https://dev.domain.com"
