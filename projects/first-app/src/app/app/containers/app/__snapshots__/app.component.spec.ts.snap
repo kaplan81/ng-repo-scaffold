@@ -8,69 +8,21 @@ exports[`AppComponent should create 1`] = `
   <div
     id="fstlayout"
   >
-    <div
-      id="fstheader"
+    <header
+      id="fst-header"
     >
       <nav
-        id="fstnav"
-      >
-        
-        <h2
-          ng-reflect-router-link="/,feature1"
-          tabindex="0"
-        >
-          feature1
-        </h2>
-      </nav>
-    </div>
-    <div
-      id="fstpage"
+        id="fst-nav"
+      />
+    </header>
+    <aside
+      id="fst-sidebar"
+    />
+    <main
+      id="fst-main"
     >
-      <div
-        id="fstcontainer"
-      >
-        <div
-          id="fstsidebar"
-        >
-          <div
-            class="widget"
-          >
-            <div
-              class="widget__heading"
-            >
-              <h3>
-                Widget
-              </h3>
-            </div>
-            <div
-              class="widget__tags"
-            >
-              <h4>
-                Tags
-              </h4>
-              <ul
-                style="margin-top: 20px;"
-              >
-                <li>
-                  Tag 1
-                </li>
-                <li>
-                  Tag 2
-                </li>
-                <li>
-                  Tag 3
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div
-          id="fstmain"
-        >
-          <router-outlet />
-        </div>
-      </div>
-    </div>
+      <router-outlet />
+    </main>
   </div>
 </fst-root>
 `;
