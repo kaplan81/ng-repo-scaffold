@@ -1,0 +1,16 @@
+$kit-gap: 10px;
+$kit-pinch: $kit-gap / 2;
+$kit-pinch-: $kit-pinch - 1;
+$kit-pinch--: $kit-pinch - 2;
+$kit-pinch---: $kit-pinch - 3;
+$kit-gap-: $kit-gap - 1;
+$kit-gap--: $kit-gap - 2;
+$kit-gap---: $kit-gap - 3;
+$kit-gutter: $kit-pinch * 3;
+$kit-gutter-: $kit-gutter - 1;
+$kit-gutter--: $kit-gutter - 2;
+$kit-gutter---: $kit-gutter - 3;
+$kit-spacing: $kit-gap * 2;
+$kit-spacing-: $kit-spacing - 1;
+$kit-spacing--: $kit-spacing - 2;
+$kit-spacing---: $kit-spacing - 3;

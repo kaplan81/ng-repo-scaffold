@@ -1,29 +1,22 @@
+@import 'theme';
+
 /* Typography */
 $rem: 16px;
-$h1: 2rem;
-$h2: 1.75rem;
-$h4: 1.5rem;
+$rem-plus: 1.25rem;
+$h1: $rem-plus;
+$h2: $h1;
+$h3: $h1;
+$h4: 1rem;
+$h5: 1rem;
+$h6: 1rem;
 
-/* Spacing */
-$gap: 10px;
-$gutter: 15px;
-$spacing: 20px;
-$header-height: 70px;
+/* Heights & Widths */
+$header-height: 60px;
 $sidebar-width: 200px;
+$button-height: 40px;
+$border-size: 1px;
 $loading-circle-size: 100px;
 
-/* Borders, outlines and shadows */
+/* Borders, Outlines & Shadows */
+$color-xxx-border: $border-size solid $xxx;
 $circle-border-radius: 50%;
-
-
-/* Colors */
-$black: #333;
-$primary: #347ca2;
-$grey-medium: #999;
-
-/* Bootstrap breakpoints */
-$xs: 320px;
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;

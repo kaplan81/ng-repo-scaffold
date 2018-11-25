@@ -1,4 +1,4 @@
 *.html
-*.scss
-*.css
+# *.scss
+# *.css
 *.md

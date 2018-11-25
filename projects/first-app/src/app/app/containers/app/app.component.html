@@ -1,30 +1,9 @@
 <div id="fstlayout">
-  <div id="fstheader">
-    <nav id="fstnav">
-      <h2 *ngFor="let link of links" [routerLink]="link.path">{{link.text}}</h2>
-    </nav>
-  </div>
-  <div id="fstpage">
-    <div id="fstcontainer">
-      <div id="fstsidebar">
-        <!--TODO: widget component -->
-        <div class="widget">
-          <div class="widget__heading">
-            <h3>Widget</h3>
-          </div>
-          <div class="widget__tags">
-            <h4>Tags</h4>
-            <ul style="margin-top: 20px;">
-              <li>Tag 1</li>
-              <li>Tag 2</li>
-              <li>Tag 3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div id="fstmain">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-  </div>
+  <header id="fst-header">
+    <nav id="fst-nav"></nav>
+  </header>
+  <aside id="fst-sidebar"></aside>
+  <main id="fst-main">
+    <router-outlet></router-outlet>
+  </main>
 </div>

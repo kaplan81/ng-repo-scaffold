@@ -3,24 +3,21 @@
   "version": "0.0.1",
   "description": "Style Library",
   "scripts": {
-    "compile": "npm run compile:css && npm run compile:css-min",
-    "compile:css": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/style.scss css/style.css",
-    "compile:css-min": "node-sass --output-style compressed --source-map true --source-map-contents true --precision 6 scss/style.scss css/style.min.css",
-    "lint": "stylelint scss/**/*.css",
-    "postinstall": "npm run compile",
-    "preversion": "npm run compile"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
+    "build": "npm run compile && npm run clean-build && npm run copy-build",
+    "clean-build": "rm -rf ./../../../dist/@project-scope/art-kit && npm run mkdir-build",
+    "compile": "npm run compile-css && npm run compile-css:min",
+    "compile-css": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/art-styles.scss css/art-styles.css",
+    "compile-css:min": "node-sass --output-style compressed --source-map true --source-map-contents true --precision 6 src/art-styles.scss css/art-styles.min.css",
+    "mkdir-build": "mkdir -p ./../../../dist/@project-scope/art-kit",
+    "copy-build": "npm run copy-build:json & npm run copy-build:css & npm run copy-build:scss",
+    "copy-build:css": "cp -v -r css ./../../../dist/@project-scope/art-kit/css",
+    "copy-build:json": "cp -v package.json ./../../../dist/@project-scope/art-kit/package.json",
+    "copy-build:scss": "cp -v -r src/scss ./../../../dist/@project-scope/art-kit/scss"
   },
   "private": true,
-  "devDependencies": {
-    "husky": "^1.0.0-rc.13",
-    "stylelint": "^9.4.0"
-  },
-  "dependencies": {
-    "node-sass": "^4.9.3"
+  "peerDependencies": {
+    "stylelint": "^9.8.0",
+    "stylelint-config-standard": "^18.2.0",
+    "node-sass": "^4.9.1"
   }
 }

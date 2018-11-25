@@ -16,7 +16,6 @@ import { KitTabContentDirective } from '../tab-content/tab-content.directive';
 @Component({
   selector: 'kit-tab',
   templateUrl: './tab.component.html',
-  styleUrls: ['./tab.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
 })

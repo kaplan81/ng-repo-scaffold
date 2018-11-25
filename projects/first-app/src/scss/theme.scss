@@ -1,0 +1,48 @@
+@import '~@project-scope/art-kit/scss/art-variables';
+@import '~@project-scope/art-kit/scss/art-mixins';
+
+$alpha: 0.87;
+$alpha-plus: 0.7;
+$alpha-half: 0.5;
+$alpha-super: 0.35;
+
+// $theme: (
+//   primary: (
+//     main: $xxx,
+//     dark: $xxx,
+//     light: $xxx
+//   ),
+//   background: $xxx,
+//   foreground: $xxx,
+//   warning: $xxx,
+//   error: $xxx,
+//   text: (
+//     primary: (
+//       dark: rgba($xxx, $alpha),
+//       light: $xxx
+//     ),
+//     secondary: (
+//       dark: rgba($xxx, $alpha),
+//       light: $xxx
+//     )
+//   )
+// );
+
+/*
+  Resultant variables:
+  $primary
+  $primary-darker
+  $primary-lighter
+  $secondary
+  $secondary-darker
+  $secondary-lighter
+  $background
+  $foreground
+  $warning
+  $error
+  $dark-primary-text
+  $light-primary-text
+  $dark-secondary-text
+  $light-secondary-text
+*/
+@include kit-theme($theme);

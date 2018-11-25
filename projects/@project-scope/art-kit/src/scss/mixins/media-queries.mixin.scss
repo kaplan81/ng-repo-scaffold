@@ -1,0 +1,53 @@
+@import '../variables/brekpoints.variable';
+
+/* Media queries */
+@mixin kit-smaller-than($media) {
+  @if $media == xs {
+    @media only screen and (max-width: $kit-xs - 1) {
+      @content;
+    }
+  } @else if $media == sm {
+    @media only screen and (max-width: $kit-sm - 1) {
+      @content;
+    }
+  } @else if $media == md {
+    @media only screen and (max-width: $kit-md - 1) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media only screen and (max-width: $kit-lg - 1) {
+      @content;
+    }
+  } @else if $media == xl {
+    @media only screen and (max-width: $kit-xl - 1) {
+      @content;
+    }
+  }
+}
+
+@mixin kit-bigger-than($media) {
+  // xs is default
+  @if $media == sm {
+    @media only screen and (min-width: $kit-sm) {
+      @content;
+    }
+  } @else if $media == md {
+    @media only screen and (min-width: $kit-md) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media only screen and (min-width: $kit-lg) {
+      @content;
+    }
+  } @else if $media == xl {
+    @media only screen and (min-width: $kit-xl) {
+      @content;
+    }
+  }
+}
+// Special cases.
+@mixin kit-between-medias($min, $max) {
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}

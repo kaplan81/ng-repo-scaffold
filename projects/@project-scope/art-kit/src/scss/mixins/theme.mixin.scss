@@ -1,0 +1,44 @@
+@import '../functions/map.function';
+
+/*
+  Parse theme colors to their corresponding global variables.
+  $primary and $text variables are mandatory in $theme
+*/
+@mixin kit-theme($theme) {
+  $primary: kit-map-deep-get($theme, 'primary', 'main') !global;
+  $primary-darker: kit-map-deep-get($theme, 'primary', 'dark') !global;
+  $primary-lighter: kit-map-deep-get($theme, 'primary', 'light') !global;
+  @if map-has-key($theme, secondary) {
+    $secondary: kit-map-deep-get($theme, 'secondary', 'main') !global;
+    $secondary-darker: kit-map-deep-get($theme, 'secondary', 'dark') !global;
+    $secondary-lighter: kit-map-deep-get($theme, 'secondary', 'light') !global;
+  } @else {
+    $secondary: null !global;
+    $secondary-darker: null !global;
+    $secondary-lighter: null !global;
+  }
+  @if map-has-key($theme, background) {
+    $background: map-get($theme, 'background') !global;
+  } @else {
+    $background: white;
+  }
+  @if map-has-key($theme, foreground) {
+    $foreground: map-get($theme, 'foreground') !global;
+  } @else {
+    $foreground: null !global;
+  }
+  @if map-has-key($theme, warning) {
+    $warning: map-get($theme, 'warning') !global;
+  } @else {
+    $warning: null !global;
+  }
+  @if map-has-key($theme, error) {
+    $error: map-get($theme, 'error') !global;
+  } @else {
+    $error: null !global;
+  }
+  $dark-primary-text: kit-map-deep-get($theme, 'text', 'primary', 'dark') !global;
+  $light-primary-text: kit-map-deep-get($theme, 'text', 'primary', 'light') !global;
+  $dark-secondary-text: kit-map-deep-get($theme, 'text', 'secondary', 'dark') !global;
+  $light-secondary-text: kit-map-deep-get($theme, 'text', 'secondary', 'light') !global;
+}

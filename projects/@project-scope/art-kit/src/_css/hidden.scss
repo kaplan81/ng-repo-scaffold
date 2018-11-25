@@ -1,0 +1,60 @@
+@import '../scss/mixins/media-queries.mixin';
+
+/*
+  The hidden filosophy is the opposite: desktop (xl) first
+  we hide elements on smaller devices and when we go down
+  we hide the corresponding elements on bigger devices.
+  We can use the hidden utility in combination with row overlapping.
+*/
+// We will most likely not have to use this class.
+.kit-hidden {
+  display: none;
+}
+
+@include kit-bigger-than(xl) {
+  .kit-hidden-xl-up {
+    display: none !important;
+  }
+}
+
+@include kit-bigger-than(lg) {
+  .kit-hidden-lg-up {
+    display: none !important;
+  }
+}
+
+@include kit-bigger-than(md) {
+  .kit-hidden-md-up {
+    display: none !important;
+  }
+}
+
+@include kit-bigger-than(sm) {
+  .kit-hidden-sm-up {
+    display: none !important;
+  }
+}
+
+@include kit-smaller-than(xl) {
+  .kit-hidden-xl-down {
+    display: none !important;
+  }
+}
+
+@include kit-smaller-than(lg) {
+  .kit-hidden-lg-down {
+    display: none !important;
+  }
+}
+
+@include kit-smaller-than(md) {
+  .kit-hidden-md-down {
+    display: none !important;
+  }
+}
+
+@include kit-smaller-than(sm) {
+  .kit-hidden-sm-down {
+    display: none !important;
+  }
+}

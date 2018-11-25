@@ -1,0 +1,12 @@
+/*
+  Breakpoints (based on Bootstrap)
+  @media (min-width: $kit-sm) => Small devices (phones, phablets and tablets) and up. Default in mobile first.
+  @media (min-width: $kit-md) => Medium devices (landscape tablets and latptops) and up.
+  @media (min-width: $kit-lg) => Large devices (monitors) and up.
+  @media (min-width: $kit-xl) => Extra large devices (big monitors) and up.
+*/
+$kit-xs: 320px;
+$kit-sm: 576px;
+$kit-md: 768px;
+$kit-lg: 992px;
+$kit-xl: 1200px;

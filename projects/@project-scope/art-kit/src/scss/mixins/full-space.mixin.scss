@@ -1,0 +1,26 @@
+@mixin kit-full-space {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin kit-full-fixed {
+  position: fixed;
+  @include kit-full-space();
+}
+
+@mixin kit-full-absolute {
+  position: absolute;
+  @include kit-full-space();
+}
+
+@mixin kit-full-relative {
+  position: relative;
+  @include kit-full-space();
+}
+
+@mixin kit-full-static {
+  position: static;
+  @include kit-full-space();
+}
